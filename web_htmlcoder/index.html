@@ -1,0 +1,37 @@
+<div class="over_x">
+	<textarea  id="t" placeholder="HTMLCSSJS" onkeydown="if((K=event).keyCode==9){K.preventDefault();s=this.selectionStart;this.value=this.value.substring(0,this.selectionStart)+&quot;	&quot;+this.value.substring(this.selectionEnd);this.selectionEnd=s+1}; f.srcdoc=value">
+<div>
+	Hello, <b id="who"></b> !
+</div>
+<script>
+	who.innerHTML = "world";
+</script>
+<style>
+body {
+	margin:0;
+	padding:0;
+	background: #26A;
+	color: #fff;
+	font: 30px arial;
+	line-height: 130px;
+	text-align: center;
+}
+</style>
+	</textarea>
+
+	<iframe id="f"></iframe>
+</div>
+
+<script>onload=function(){ f.srcdoc=t.value; }</script>
+<style>
+    html, body { height: 100% }
+    * { box-sizing: border-box; -moz-box-sizing: border-box; margin: 0; vertical-align: top }
+    textarea, iframe { border: 1px solid}
+
+    .over_x textarea { float:left; resize: none;  width:50%; height: 100%; }
+    .over_x iframe { float:left; width: 50%; height: 100% }
+
+    .over_y textarea { resize: none; width:100%; height: 40%; /*width: 33.333%; *width: 32%*/ }
+    .over_y iframe { width: 100%; height: 60% }
+}
+</style>
