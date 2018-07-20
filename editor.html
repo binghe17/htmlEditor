@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Real Time Editor</title>
+    <script>
+        function refresh(){
+            var textContent = document.getElementById('editor-textarea').value;
+            document.getElementById('viewer').srcdoc = textContent;
+        }
+    </script>
+    <style>
+        * {padding: 0; margin: 0;}
+        .main{background: #ecf0f1; width:100%; height:100%; display: inline-flex;}
+        #editor-textarea{width:100%;  margin:10px;}
+        #viewer{background: white; border:none; width:100%;  margin:10px;}
+    </style>
+
+    
+</head>
+<body>
+    <div class="main">
+        <textarea id="editor-textarea" onkeyup="refresh()"></textarea>
+        <iframe id="viewer"></iframe>
+    </div>
+    
+</body>
+</html>
